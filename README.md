@@ -43,7 +43,7 @@ In my case I often use [Visual Studio Code](https://code.visualstudio.com/) for 
 
 If you had no experience until now with Blazor - you can go thru this short ["getting stated"](https://dotnet.microsoft.com/learn/aspnet/blazor-tutorial/install) in the dotnet website. This was also my starting point while building this project. An other great source is the ["ASP.NET Core 101" video series on channel9](https://channel9.msdn.com/Series/ASPNET-Core-101) from Lealie Richardson and Scott Hanselmann.
 
-Now that you have your clone of source code on your machine you can navidate to the __{your-project-path}\wwwroot\data__ folder in the basic path of your project. In this folder there is a sample __agenda.json__ file, which represents the given sample agenda. 
+Now that you have your clone of source code on your machine you can navigate to the __{your-project-path}\wwwroot\data__ folder in the basic path of your project. In this folder there is a sample __agenda.json__ file, which represents the given sample agenda. 
 
 ![agenda.json-File](/sources/agenda-json-file.png)
 
@@ -78,8 +78,20 @@ This is a JSON-Representation of the Session "First Challenge", which is divided
 
 ### The potential changes you have to make to build your Virtual Agenda
 
-If you want to use the Virtual Agenda in your context, it is a good practice to change the appearance of the website to meet more your corporate design guidelines. 
+If you want to use the Virtual Agenda in your context, it is a good practice to change the appearance of the website to meet more your corporate design guidelines. The whole VirtualAgenda Project is based on the sample Blazor Website. So we have bootstrap behind the scenes. So feel free to update and change all css-files in the repository. Best starting point is the site.css File in the wwwroot\css folder. 
+
+If you want to change the text on the website, feel free to change it in the .razor Files under the \pages folder.
+
+[SAMPLES]
 
 ### How to deploy the Virtual Agenda website on Azure
 
+There are multiple ways of deployment. To leverage the azure portal do the following steps:
+
+[TODO]
+
 ## Some tips
+
+> [!IMPORTANT]
+> If you have deployed your VirtualAgenda to Azure - you can add an application setting in the configuration __UseAdmin__ and set the value to __false__! The VirtualAgenda will then hide the build agenda site. You will still be able to directly call the build agenda site by using the direct path _nameofyourwebsite_.azurewebsites.net/BuildAgenda.
+

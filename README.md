@@ -120,8 +120,9 @@ There are multiple ways of deployment. To leverage the azure portal do the follo
 
 ## Some tips
 
-> [!IMPORTANT]
-> If you have deployed your VirtualAgenda to Azure - you can add an application setting in the configuration __UseAdmin__ and set the value to __false__! The VirtualAgenda will then hide the build agenda site. You will still be able to directly call the build agenda site by using the direct path _nameofyourwebsite_.azurewebsites.net/BuildAgenda.
+>### Buidl Agenda - Navigation
+>If you have deployed your VirtualAgenda to Azure - you can add an application setting in the configuration __UseAdmin__ and set the value to __false__! The VirtualAgenda will then hide the build agenda site. You will still be able to directly call the build agenda site by using the direct path _nameofyourwebsite_.azurewebsites.net/BuildAgenda.
+
 
 **Sample screenshot for the application setting:**
 ![application setting](/sources/application_setting.png)

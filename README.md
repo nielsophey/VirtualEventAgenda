@@ -82,13 +82,41 @@ If you want to use the Virtual Agenda in your context, it is a good practice to 
 
 If you want to change the text on the website, feel free to change it in the .razor Files under the \pages folder.
 
-[SAMPLES]
-
-### How to deploy the Virtual Agenda website on Azure
+## How to deploy the Virtual Agenda website on Azure
 
 There are multiple ways of deployment. To leverage the azure portal do the following steps:
 
-[TODO]
+### Fork this repository into your GitHub account
+
+   ![Fork the repo](sources/fork-repo.png)
+
+### Create a new WebApp to host your Website
+
+   The runtime stack must be set to **.net core 3.1** and the operating system should be **windows**. In my case I used the S1 sizing for the WebApp.
+
+   ![Create the webapp in the Azure portal](sources/create-webapp.png)
+
+### In the Deployment Center create the connection to your Github repository
+
+   Connect the Repo and also define where the deployment pipeline should be hosted - you can use GitHub here in both areas:
+
+#### The Source Control
+
+   In this screenshot the connection to GitHub is already been configured. In case it is the first time using the deployment center - the GitHub credentials must be provided
+
+   ![Configure the source control](/sources/configure-deploymentcenter-repo.png)
+
+#### Configure the Build Provider
+
+  ![Configure the build provider](/sources/configure-deploymentcenter-buildprovider.png)
+
+#### Provide the needed configuration
+
+  ![Set the correct configuration](sources/configure-deploymentcenter-configuration.png)
+
+### Let Azure do the magic ;-)
+
+   Every time new code is checked into the configured branch, in this case the master branch, the GitHub Action will deploy your VirtualAgenda into the Webapp.
 
 ## Some tips
 
